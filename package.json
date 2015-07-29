@@ -1,0 +1,47 @@
+{
+  "name": "react-inview",
+  "version": "0.0.1-pre",
+  "description": "React Component that triggers an event when inview",
+  "main": "dist/cjs/inview.js",
+  "scripts": {
+    "lint": "eslint src test --ext .jsx && eslint example/*jsx example/*js",
+    "test": "npm run lint && mocha test/*.jsx --compilers jsx:babel/register",
+    "build": "npm run build:es6 && npm run build:js && npm run build:amd && npm run build:cjs && npm run build:umd",
+    "build:js": "mkdir -p tmp 2>/dev/null && babel src/inview.jsx -b es6.modules -o tmp/inview.js",
+    "build:amd": "mkdir -p dist/amd 2>/dev/null && esperanto -i ./tmp/inview.js -t amd -o ./dist/amd/inview.js",
+    "build:cjs": "mkdir -p dist/cjs 2>/dev/null && esperanto -i ./tmp/inview.js -t cjs -o ./dist/cjs/inview.js",
+    "build:es6": "mkdir -p dist/es6 2>/dev/null && cp -p ./src/inview.jsx ./dist/es6/inview.jsx",
+    "build:umd": "mkdir -p dist/umd 2>/dev/null && esperanto -i ./tmp/inview.js -t umd --name Inview -o ./dist/umd/inview.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rxaviers/react-inview.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component"
+  ],
+  "author": "Rafael Xavier de Souza <rxaviers@gmail.com> (@rxaviers)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rxaviers/react-inview/issues"
+  },
+  "homepage": "https://github.com/rxaviers/react-inview",
+  "dependencies": {
+    "jquery": "*",
+    "jquery-inview": "git://github.com/rxaviers/jquery.inview#master"
+  },
+  "peerDependencies": {
+    "react": ">= 0.13.0 < 1.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.0.0",
+    "babel-eslint": "^4.0.5",
+    "chai": "^3.2.0",
+    "eslint": "^0.24.1",
+    "eslint-plugin-react": "^3.1.0",
+    "esperanto": "^0.7.3",
+    "mocha": "^2.2.5"
+  }
+}

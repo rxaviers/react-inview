@@ -1,0 +1,9 @@
+{
+  "name": "react-inview",
+  "main": "dist/umd/inview.js",
+  "dependencies": {
+    "jquery": "*",
+    "jquery-inview": "git://github.com/rxaviers/jquery.inview#master",
+    "react": ">= 0.13.0 < 1.0.0"
+  }
+}
