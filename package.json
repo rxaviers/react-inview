@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "React Component that triggers an event when inview",
   "main": "dist/cjs/inview.js",
+  "files": ["dist"],
   "scripts": {
     "lint": "eslint src test --ext .jsx && eslint example/*jsx example/*js",
     "test": "npm run lint && mocha test/*.jsx --compilers jsx:babel/register",
