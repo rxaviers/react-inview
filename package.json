@@ -1,6 +1,6 @@
 {
   "name": "react-inview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Component that triggers an event when inview",
   "main": "dist/cjs/inview.js",
   "scripts": {
