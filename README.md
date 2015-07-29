@@ -17,7 +17,7 @@ See the [example](./example) for more details.
 
 Install it using `npm`.
 
-    npm install --save rxaviers/react-inview
+    npm install --save react-inview
 
 Simple usage example.
 
