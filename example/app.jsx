@@ -1,11 +1,11 @@
 /* global fixture, React, List */
 
-function SimpleModel() {
+function DemoModel() {
   this.perPage = 10;
   this.page = 0;
 }
 
-SimpleModel.prototype.nextPage = function(callback) {
+DemoModel.prototype.nextPage = function(callback) {
   var start = this.page * this.perPage;
   var end = start + this.perPage;
   var data = fixture.slice(start, end);
@@ -19,7 +19,7 @@ SimpleModel.prototype.nextPage = function(callback) {
 
 var App = React.createClass({
   getInitialState: function() {
-    this.model = new SimpleModel();
+    this.model = new DemoModel();
     return {
       list: [],
       fetching: true
