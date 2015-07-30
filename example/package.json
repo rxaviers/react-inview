@@ -4,6 +4,6 @@
     "jquery": "^2.1.4",
     "jquery-inview": "git://github.com/rxaviers/jquery.inview#master",
     "react": "^0.13.0",
-    "react-inview": "^0.0.1"
+    "react-inview": "0.0.*"
   }
 }
