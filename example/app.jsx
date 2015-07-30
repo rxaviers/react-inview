@@ -33,7 +33,6 @@ var App = React.createClass({
       if (!nextPage.length) {
         console.log("- no more pages to fetch");
       }
-      console.log("- update state");
       this.setState({
         list: this.state.list.concat(nextPage),
         fetching: !!nextPage.length
