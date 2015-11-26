@@ -1,11 +1,12 @@
 import $ from "jquery";
 import React from "react";
+import ReactDOM from "react-dom";
 import "jquery-inview";
 
 var Inview = React.createClass({
   componentDidMount: function() {
     const self = this;
-    const element = React.findDOMNode(this);
+    const element = ReactDOM.findDOMNode(this);
     this.active = true;
     $(element).on("inview", function() {
       if (self.active) {
@@ -21,7 +22,7 @@ var Inview = React.createClass({
   },
 
   componentWillUnmount: function() {
-    const element = React.findDOMNode(this);
+    const element = ReactDOM.findDOMNode(this);
     $(element).off("inview");
   },
 

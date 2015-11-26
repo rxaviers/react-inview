@@ -3,7 +3,9 @@
   "version": "0.0.4",
   "description": "React Component that triggers an event when inview",
   "main": "dist/cjs/inview.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint src test --ext .jsx && eslint example/*jsx example/*js",
     "test": "npm run lint && mocha test/*.jsx --compilers jsx:babel/register",
@@ -34,7 +36,7 @@
     "jquery-inview": "git://github.com/rxaviers/jquery.inview#master"
   },
   "peerDependencies": {
-    "react": ">= 0.13.0 < 1.0.0"
+    "react": ">= 0.14.0 < 1.0.0"
   },
   "devDependencies": {
     "babel": "^5.0.0",
@@ -43,6 +45,8 @@
     "eslint": "^0.24.1",
     "eslint-plugin-react": "^3.1.0",
     "esperanto": "^0.7.3",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.3"
   }
 }
