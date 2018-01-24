@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/rxaviers/react-inview",
   "dependencies": {
-    "jquery": ">3",
+    "jquery": ">=3",
     "jquery-inview": "git://github.com/rxaviers/jquery.inview#master"
   },
   "peerDependencies": {
